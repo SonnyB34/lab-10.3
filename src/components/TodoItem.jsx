@@ -21,6 +21,46 @@ export default function TodoItem() {
     const cancelEdit = () => {
         setDraft(todo.text); // reset draft to original text
         setIsEditing(false);
-    }
+    };
+
+    return (
+        <li className='todo-item'>
+            <input 
+                type='checkbox'
+                checked={todo.completed}
+                onChange={() => toggleTodo(todo.id)}
+            />
+
+            {/* If editing show the text box*/}
+            {isEditing ? (
+                <input 
+                    className='edit-input'
+                    value={draft}
+                    autoFocus
+                    onChange={(e) => setDraft(e.target.value)}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter") saveEdit();
+                        if (e.key === "Escape") cancelEdit();
+                    }}
+                />
+            ) : (
+                // if the todo is complete add done wiht a line through
+                <span className={todo.completed ? "done" : ""}>{todo.text}</span>
+            )}
+
+            {/* Show different buttons depending on the mood */}
+      {isEditing ? (
+        <>
+          <button onClick={save}>Save</button>
+          <button onClick={cancel}>Cancel</button>
+        </>
+      ) : (
+        <>
+          <button onClick={() => setIsEditing(true)}>Edit</button>
+          <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+        </>
+      )}
+        </li>
+    );
 
 }
