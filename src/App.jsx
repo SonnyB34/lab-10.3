@@ -1,5 +1,6 @@
 import TodoInput from './components/TodoInput'
 import './App.css'
+import TodoList from './components/TodoList'
 
 function App() {
  
@@ -11,6 +12,7 @@ function App() {
       </header>
 
       <TodoInput />
+      <TodoList />
     </div>
   )
 }

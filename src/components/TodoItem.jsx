@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTodos } from '../context/TodoContext';
 
 
-export default function TodoItem() {
+export default function TodoItem({ todo }) {
     
     const { toggleTodo, deleteTodo, editTodo } = useTodos();
 
