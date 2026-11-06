@@ -11,6 +11,7 @@ function App() {
 
   return (
     <div className={`app ${theme}`}>
+      <div className='container'>
       <header>
         <h1>Todo App</h1>
         <ThemeToggleButton />
@@ -19,6 +20,7 @@ function App() {
       <TodoInput />
       <FilterButtons />
       <TodoList />
+      </div>
     </div>
   )
 }
