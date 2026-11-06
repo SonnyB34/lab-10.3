@@ -13,7 +13,7 @@ function App() {
     <div className={`app ${theme}`}>
       <div className='container'>
       <header>
-        <h1>Todo App</h1>
+        <h1>Todo-App</h1>
         <ThemeToggleButton />
       </header>
 

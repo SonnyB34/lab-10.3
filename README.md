@@ -1,4 +1,14 @@
-# React + Vite
+# To-Do APP (Context API)
+
+Functional Todo application leveraging Reacts Context API to manage different aspects of the application's state.
+
+- Designed multiple independent contexts for different pieces of global state
+- Created Context Providers that share state and functions across the component tree
+- Managed complex state with useState.
+- Used useLocalStorage custom hook to save app data in the users web browser so it doesnt disapper when refreshing the page or closing the tab. 
+
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
