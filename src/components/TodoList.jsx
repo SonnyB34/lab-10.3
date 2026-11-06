@@ -21,7 +21,7 @@ export default function TodoList() {
   }
   return (
     <>
-      <ul>
+      <ul className="todo-list">
         {visibleTodos.map((todo) => (
           <TodoItem key={todo.id} todo={todo} />
         ))}

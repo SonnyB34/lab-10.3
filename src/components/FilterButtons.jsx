@@ -12,7 +12,7 @@ export default function FilterButtons() {
   const { filter, setFilter } = useFilter();
 
   return (
-    <div>
+    <div className='filters'>
       {/* Makes on button for each item in filterOption */}
       {filterOptions.map(({ label, value }) => (
         <button
